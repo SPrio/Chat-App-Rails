@@ -3,9 +3,9 @@
 one:
   content: MyText
   user: one
-  roon: one
+  room: one
 
 two:
   content: MyText
   user: two
-  roon: two
+  room: two

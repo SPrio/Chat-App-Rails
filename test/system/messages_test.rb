@@ -15,7 +15,7 @@ class MessagesTest < ApplicationSystemTestCase
     click_on "New Message"
 
     fill_in "Content", with: @message.content
-    fill_in "Roon", with: @message.roon_id
+    fill_in "room", with: @message.room_id
     fill_in "User", with: @message.user_id
     click_on "Create Message"
 
@@ -28,7 +28,7 @@ class MessagesTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Content", with: @message.content
-    fill_in "Roon", with: @message.roon_id
+    fill_in "room", with: @message.room_id
     fill_in "User", with: @message.user_id
     click_on "Update Message"
 
