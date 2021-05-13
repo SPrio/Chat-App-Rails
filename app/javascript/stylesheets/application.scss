@@ -4,7 +4,7 @@
   padding-bottom: 60px;
   .message {
     min-height: 59px;
-    .content-container{
+    .content-container {
       display: inline-block;
       .content {
         background-color: #eeeeee;
@@ -20,7 +20,7 @@
     &.me {
       .content-container {
         float: right;
-        .content{
+        .content {
           background-color: #007bff;
           color: white;
         }
@@ -39,6 +39,39 @@
     }
     .btn {
       height: 45px;
+    }
+  }
+}
+
+.card.no-outline {
+  border: none;
+}
+
+.room-link {
+  text-decoration: none;
+  .room-card {
+    transition: background-color 0.5s ease;
+    border-radius: 20px;
+    &:hover {
+      background-color: #eeeeee;
+    }
+    &.active {
+      background-color: black;
+
+      .name {
+        color: white;
+      }
+      .member-count {
+        color: #e0e0e0;
+      }
+    }
+    .name {
+      font-weight: bold;
+      color: black;
+    }
+    .member-count {
+      color: #777777;
+      font-weight: light;
     }
   }
 }
