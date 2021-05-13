@@ -2,13 +2,14 @@
 <div id="user-id" data-user-id="<%= current_user.id %>"></div>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-3">
+    <div class="col-3 rooms-sidebar">
       <div class="card mt-2 no-outline">
         <div class="card-body">
           <small>Logged in as</small><br>
           <b><%= current_user.username %></b>
         </div>
       </div>
+      <hr>
       <%= render 'form', room: Room.new %>
       <hr>
       <% @rooms.each do |room| %>
@@ -26,9 +27,12 @@
     <div class="col-9">
       <% if @room.present? %>
         <div class="chat-room">
-          <nav class="navbar navbar-light bg-light mb-4">
+          <nav class="navbar navbar-light bg-light border-bottom">
             <div class="container-fluid">
-              <span class="navbar-brand"><%= @room.name %></span>
+              <span class="navbar-brand">
+                <b><%= @room.name %></b>
+              </span>
+              <small><%= @room.users.uniq.count %> Members</small>
             </div>
           </nav>
           <div id="messages">

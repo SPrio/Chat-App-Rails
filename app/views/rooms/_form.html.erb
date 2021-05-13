@@ -9,11 +9,9 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, class: "form-control" %>
+  <div class="form-group mb-3">
+    <%= form.label :name, "Add a new room" %>
+    <%= form.text_field :name, class: "form-control", placeholder: "Room name" %>
   </div>
-  <div class="actions">
-    <%= form.submit "Add room", class: "btn btn-primary col-12" %>
-  </div>
+  <%= form.submit "Add", class: "btn btn-outline-primary col-12" %>
 <% end %>

@@ -35,7 +35,7 @@ document.addEventListener('turbolinks:load', () => {
 
       const messageContainer = document.getElementById('messages')
       messageContainer.innerHTML += html
-      messageContainer.scrollIntoView({block: 'end', behavior: 'smooth'});
+      // messageContainer.scrollIntoView({block: 'end', behavior: 'smooth'});
     }
   });
 })
